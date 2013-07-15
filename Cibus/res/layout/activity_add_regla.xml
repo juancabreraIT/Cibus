@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DDDDDD" >
+
+    <RelativeLayout
+        android:id="@+id/barraSup2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFFF8000"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/botonBack"
+            android:gravity="center|left"
+            android:text="@string/newRegla"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFFFF" />
+
+        <Button
+            android:id="@+id/botonEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/boton_save_style"
+            android:onClick="pulsaGuardarRegla" />
+    </RelativeLayout>
+
+    <ScrollView 
+		android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+        
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_marginLeft="16dp"
+	        android:layout_marginRight="5dp" >
+	
+	        <TextView
+	            android:id="@+id/textoSeleccion"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/selecciona"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <Spinner
+	            android:id="@+id/spinnerOpciones"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp" />
+	        
+	        <View
+	            android:id="@+id/line"
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_marginBottom="5dp"
+	            android:background="#AAAAAAAA" />
+	
+	        <TextView
+	            android:id="@+id/textoSeleccion2"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/selecciona2"
+	            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	        <Spinner
+	            android:id="@+id/spinnerCriterio"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp" />
+	        
+	        <View
+	            android:id="@+id/line2"
+	            android:layout_width="match_parent"
+	            android:layout_height="1dp"
+	            android:layout_marginBottom="5dp"
+	            android:background="#AAAAAAAA" />
+	
+	        <AutoCompleteTextView
+	            android:id="@+id/editFiltro"
+	            android:hint="@string/hintFiltro"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginBottom="5dp" >
+	        </AutoCompleteTextView>
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="40dp"
+	            android:orientation="horizontal" >
+	
+	            <Button
+	                android:id="@+id/botonInofensivo"
+	                style="?android:attr/buttonStyleSmall"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="1dp"
+	                android:layout_marginRight="1dp"
+	                android:layout_weight="1"
+	                android:background="@drawable/boton_background_green"
+	                android:text="@string/inofensivo" />
+	
+	            <Button
+	                android:id="@+id/botonSospechoso"
+	                style="?android:attr/buttonStyleSmall"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="1dp"
+	                android:layout_marginRight="1dp"
+	                android:layout_weight="1"
+	                android:background="@drawable/boton_background_yellow"
+	                android:text="@string/sospechoso" />
+	
+	            <Button
+	                android:id="@+id/botonPeligroso"
+	                style="?android:attr/buttonStyleSmall"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="1dp"
+	                android:layout_marginRight="1dp"
+	                android:layout_weight="1"
+	                android:background="@drawable/boton_background_red"
+	                android:text="@string/peligroso" />
+
+	        </LinearLayout>             
+        
+    	</LinearLayout>
+    	
+    </ScrollView>
+
+</LinearLayout>

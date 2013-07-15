@@ -1,0 +1,84 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSemaforo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/barraSup3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFFF8000"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+		<TextView
+		    android:id="@+id/textSemaforo"
+			android:text="@string/textSemaforo"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+			android:layout_toRightOf="@id/botonBack"
+		    android:gravity="center|left"
+		    android:textAppearance="?android:attr/textAppearanceLarge"
+		    android:textColor="#FFFFFFFF" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageSemaforo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/semaforo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:hint="@string/mensajeFiltrado"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textReglaFail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:hint="@string/mensajeReglaFail"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

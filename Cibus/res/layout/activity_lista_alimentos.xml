@@ -1,0 +1,43 @@
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD">
+
+    <RelativeLayout
+        android:id="@+id/barraSup"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFFF8000"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+		<TextView
+		    android:id="@+id/consultaAlimento"
+			android:text="@string/consultaAlimentos"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+			android:layout_toRightOf="@id/botonBack"
+		    android:gravity="center|left"
+		    android:textAppearance="?android:attr/textAppearanceLarge"
+		    android:textColor="#FFFFFFFF" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listaAlimentos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/barraSup"
+        android:layout_marginLeft="16dp" >
+    </ListView>
+
+</RelativeLayout>

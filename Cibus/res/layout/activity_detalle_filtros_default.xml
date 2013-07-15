@@ -1,0 +1,181 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/barraSup2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFFF8000"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/botonBack"
+            android:gravity="center|left"
+            android:text="@string/detalleFiltro"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFFFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/nombreFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="3dp"
+            android:hint="@string/nombre"
+            android:maxLength="40"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/nombreFiltro"
+            android:layout_marginBottom="5dp"
+            android:background="#AAAAAAAA" />
+
+        <TextView
+            android:id="@+id/descripcionFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="3dp"
+            android:hint="@string/sinDescripcion"
+            android:maxLength="120"
+            android:maxLines="4"
+            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/descripcionFiltro"
+            android:layout_marginBottom="5dp"
+            android:background="#AAAAAAAA" />
+
+        <TextView
+            android:id="@+id/textoReglas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="6dp"
+            android:text="@string/reglas"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FF4000"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/textoIlustra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textoReglas"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="6dp"
+            android:text="@string/textoIlustra"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FF4000"
+            android:typeface="serif" />
+
+        <TableLayout
+            android:id="@+id/tablaReglas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textoIlustra"
+            android:shrinkColumns="*"
+            android:stretchColumns="*" >
+        </TableLayout>
+
+        <View
+            android:id="@+id/linea"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/listadoReglas"
+            android:layout_marginBottom="5dp"
+            android:background="#AAAAAAAA" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="2dp"    
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/botonSelectFiltro"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="10"
+                android:background="@drawable/boton_background_orange"
+                android:onClick="pulsaUseFiltro"
+                android:text="@string/selectFiltro"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/botonEntradaManual"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="9"
+                android:background="@drawable/boton_background_orange"
+                android:onClick="pulsaEntradaManual"
+                android:text="@string/entradaManual"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listadoReglas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/linearLayout"
+            android:layout_below="@id/textoIlustra"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

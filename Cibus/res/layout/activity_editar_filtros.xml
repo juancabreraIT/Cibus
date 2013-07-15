@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    android:gravity="bottom" >
+
+    <RelativeLayout
+        android:id="@+id/barraSup2"
+       	android:layout_width="match_parent"
+       	android:layout_height="48dp"
+       	android:background="#FFFF8000"
+       	android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+	    <TextView
+	        android:text="@string/editarFiltro"
+			android:textAppearance="?android:attr/textAppearanceLarge"	        
+	        android:textColor="#FFFFFFFF"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_toRightOf="@id/botonBack"
+		    android:gravity="center|left" />
+	    
+	    <Button
+            android:id="@+id/botonEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"            
+            android:background="@drawable/boton_save_style"
+            android:onClick="pulsaGuardarFiltro" />
+
+    </RelativeLayout>
+    
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/barraSup2" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nombre_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/nombre"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="#FF4000" />
+
+            <EditText
+                android:id="@+id/nombreFiltro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="3dp"
+                android:hint="@string/nombre"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="4dp"
+                android:background="#AAAAAAAA" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="@string/descripcion_"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="#FF4000" />
+
+            <EditText
+                android:id="@+id/descripcionFiltro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="3dp"
+                android:hint="@string/descripcion"
+                android:maxLines="4"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="4dp"
+                android:background="#AAAAAAAA" />
+            
+        </LinearLayout>
+
+	</ScrollView>
+
+    <TextView
+        android:id="@+id/textoReglas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollView"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/reglas"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FF4000"
+        android:textStyle="bold" />
+
+    <Button
+	    android:id="@+id/botonAddRegla"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/scrollView"
+	    android:layout_above="@id/textoIlustra"
+	    android:layout_centerHorizontal="true"
+	    android:text="@string/textoBotonAdd"
+	    android:onClick="pulsaAddRegla" />
+    
+	<TextView
+	    android:id="@+id/textoIlustra"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textoReglas"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginLeft="6dp"
+	    android:text="@string/textoIlustra"
+	    android:textAppearance="?android:attr/textAppearanceMedium"
+	    android:textColor="#FF4000" />
+
+	<View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginBottom="5dp"
+      android:layout_below="@id/listadoReglas"
+      android:background="#AAAAAAAA" />
+	
+	<Button
+	    android:id="@+id/botonEliminarFiltro"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="5dp"
+	    android:layout_marginLeft="16dp"
+	    android:layout_marginRight="16dp"
+	    android:layout_marginTop="4dp"
+	    android:background="@drawable/boton_background_red_middle"
+	    android:onClick="pulsaEliminarFiltro"
+	    android:text="@string/eliminarFiltro"
+	    android:textAppearance="?android:attr/textAppearanceLargeInverse"
+	    android:textColor="@android:color/white"
+	    android:textStyle="bold" />
+	
+	<ListView
+	    android:id="@+id/listadoReglas"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/textoIlustra"
+		android:layout_above="@id/botonEliminarFiltro"
+	    android:layout_marginLeft="16dp"
+	    android:layout_marginRight="4dp"
+	    android:layout_marginBottom="5dp" >
+	</ListView>
+	
+</RelativeLayout>

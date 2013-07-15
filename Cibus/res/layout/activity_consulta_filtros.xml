@@ -1,0 +1,63 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/barraSup1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFFF8000"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+        <EditText
+            android:id="@+id/textoBuscar"
+            android:hint="@string/buscarAditivo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/botonBack"            
+            android:inputType="text|textCapSentences"
+            android:maxLines="1"
+            android:visibility="gone" >
+
+            <requestFocus />
+        </EditText>
+
+		<TextView
+		    android:id="@+id/consultaFiltros"
+			android:text="@string/consultaFiltros"
+		    android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+			android:layout_toRightOf="@id/botonBack"
+		    android:gravity="center|left"
+		    android:textAppearance="?android:attr/textAppearanceLarge"
+		    android:textColor="#FFFFFFFF" />
+
+        <Button
+            android:id="@+id/botonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"            
+            android:background="@drawable/boton_add_style"
+            android:onClick="pulsaNewFiltro" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listaFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>       
+
+</LinearLayout>

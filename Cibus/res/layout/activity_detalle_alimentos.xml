@@ -1,0 +1,377 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DDDDDD" >
+
+    <RelativeLayout
+        android:id="@+id/barraSup"
+       	android:layout_width="match_parent"
+       	android:layout_height="48dp"
+       	android:background="#FFFF8000"
+       	android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+	    <TextView
+	        android:id="@+id/detalleAlimento"
+	        android:text="@string/detalleAlimento"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_toRightOf="@id/botonBack"
+		    android:gravity="center|left"
+	        android:textAppearance="?android:attr/textAppearanceLarge"	        
+	        android:textColor="#FFFFFFFF" />
+
+    </RelativeLayout>
+    
+    <TabHost 
+        android:id="@android:id/tabhost"
+     	android:layout_width="match_parent"
+     	android:layout_height="match_parent">
+ 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+ 
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFF8000"
+                android:divider="#EEEEEE"
+                android:gravity="fill_horizontal|center_vertical" />
+            
+            <FrameLayout 
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+ 
+                <!-- Pestaña INFO ALIMENTO -->
+	            <ScrollView
+	                android:id="@+id/tabInfo"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="16dp"
+	                android:background="#EEEEEE" >
+				        
+			        <LinearLayout
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:orientation="vertical" >
+			
+			            <TextView
+			                android:id="@+id/nombre_"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginLeft="3dp"
+			                android:text="@string/nombre"
+			                android:textAppearance="?android:attr/textAppearanceLargeInverse"
+			                android:textStyle="bold"
+			                android:typeface="normal"
+			                android:textColor="#FF4000" />
+			
+			            <TextView
+			                android:id="@+id/nombreAlimento"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginBottom="5dp"
+			                android:layout_marginLeft="3dp"
+			                android:layout_marginRight="3dp"
+			                android:hint="@string/nombreAlimento"
+			                android:text=""
+			                android:textAppearance="?android:attr/textAppearanceLargeInverse"
+			                android:textColor="#000000"
+			                android:textColorHint="@android:color/black"
+			                android:textStyle="bold"
+			                android:typeface="serif" />
+			
+			            <View
+			                android:layout_width="match_parent"
+			                android:layout_height="1dp"
+			                android:layout_marginBottom="5dp"
+			                android:background="#AAAAAAAA" />
+			
+			            <TextView
+			                android:id="@+id/tipo"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginLeft="3dp"
+			                android:text="@string/tipo"
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:textColor="#FF4000"
+			                android:textStyle="bold"
+			                android:typeface="normal" />
+			
+			            <TextView
+			                android:id="@+id/tipoAlimento"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginBottom="5dp"
+			                android:layout_marginLeft="3dp"
+			                android:layout_marginRight="3dp"
+			                android:hint="@string/tipoAlimento"
+			                android:text=""
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:typeface="serif" />
+			
+			            <View
+			                android:layout_width="match_parent"
+			                android:layout_height="1dp"
+			                android:layout_marginBottom="5dp"
+			                android:background="#AAAAAAAA" />
+			
+			            <TextView
+			                android:id="@+id/descripcion"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginLeft="3dp"
+			                android:text="@string/descripcion_"
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:textColor="#FF4000"
+			                android:textStyle="bold" />
+			
+			            <TextView
+			                android:id="@+id/descripcionAlimento"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginLeft="3dp"
+			                android:layout_marginRight="3dp"
+			                android:hint="@string/descripcionAlimento"
+			                android:maxLines="4"
+			                android:text=""
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:typeface="serif" />
+			
+			            <ImageView
+			                android:id="@+id/flechaDescripcion"
+			                android:layout_width="wrap_content"
+			                android:layout_height="20dp"
+			                android:layout_gravity="right"
+			                android:contentDescription="@string/contentFlechita"
+			                android:src="@drawable/navigation_expand" />
+			
+			            <View
+			                android:layout_width="match_parent"
+			                android:layout_height="1dp"
+			                android:layout_marginBottom="5dp"
+			                android:background="#AAAAAAAA" />         
+			            
+			            <TextView
+			                android:id="@+id/formato"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginLeft="3dp"
+			                android:text="@string/formato"
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:textColor="#FF4000"
+			                android:textStyle="bold" />
+			
+			            <TextView
+			                android:id="@+id/formatoAlimento"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginBottom="5dp"
+			                android:layout_marginLeft="3dp"
+			                android:layout_marginRight="3dp"
+			                android:hint="@string/formatoAlimento"
+			                android:text=""
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:typeface="serif" />
+			            
+			             <View
+			                android:layout_width="match_parent"
+			                android:layout_height="1dp"
+			                android:layout_marginBottom="5dp"
+			                android:background="#AAAAAAAA" />
+
+			            <TextView
+			                android:id="@+id/marca"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginLeft="3dp"
+			                android:text="@string/marca"
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:textColor="#FF4000"
+			                android:textStyle="bold" />
+			
+			            <TextView
+			                android:id="@+id/marcaAlimento"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginBottom="5dp"
+			                android:layout_marginLeft="3dp"
+			                android:layout_marginRight="3dp"
+			                android:hint="@string/marcaAlimento"
+			                android:text=""
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:typeface="serif" />
+			            
+			             <View
+			                android:layout_width="match_parent"
+			                android:layout_height="1dp"
+			                android:layout_marginBottom="5dp"
+			                android:background="#AAAAAAAA" />				             
+			            
+			            <TextView
+			                android:id="@+id/submarca"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginLeft="3dp"
+			                android:text="@string/submarca"
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:textColor="#FF4000"
+			                android:textStyle="bold" />
+			
+			            <TextView
+			                android:id="@+id/submarcaAlimento"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:layout_marginBottom="5dp"
+			                android:layout_marginLeft="3dp"
+			                android:layout_marginRight="3dp"
+			                android:hint="@string/submarcaAlimento"
+			                android:text=""
+			                android:textAppearance="?android:attr/textAppearanceMedium"
+			                android:typeface="serif" />
+
+			        </LinearLayout>
+
+				</ScrollView>
+
+	            <!-- Pestaña INGREDIENTES -->
+	            <LinearLayout
+	                android:id="@+id/tabIngredientes"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical"
+	                android:layout_marginLeft="16dp"
+				    android:layout_marginRight="1dp" >
+
+					<LinearLayout
+					    android:id="@+id/layoutCabeceraIngredientes"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_marginBottom="1dp"
+					    android:orientation="horizontal"
+					    android:background="@drawable/celda_cabecera" >
+
+					    <TextView
+					        android:text="@string/nombre"
+					        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+					        android:textColor="#FFFFFF"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:paddingLeft="4dp"
+					        android:gravity="left" />
+
+					    <TextView
+							android:text="@string/cantidad"
+					        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+					        android:textColor="#FFFFFF"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:layout_weight="1"
+					        android:gravity="center" />
+					</LinearLayout>
+					
+		            <ScrollView 
+		                android:id="@+id/scrollIngredientes"
+		                android:layout_width="match_parent" 
+	       				android:layout_height="wrap_content" >
+	
+		                <TableLayout
+		                    android:id="@+id/tablaIngredientes"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"					        
+					        android:stretchColumns="*"
+					        android:shrinkColumns="*" >
+	
+						</TableLayout>
+	
+		            </ScrollView>
+
+	            </LinearLayout>
+	            
+	            <!-- Pestaña NUTRIENTES -->
+	            <LinearLayout
+	                android:id="@+id/tabNutrientes"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent"
+	                android:orientation="vertical"
+	                android:layout_marginLeft="16dp"
+				    android:layout_marginRight="1dp" >
+
+					<LinearLayout
+					    android:id="@+id/layoutCabeceraNutrientes"
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content"
+					    android:layout_marginBottom="1dp"
+					    android:orientation="horizontal"
+					    android:background="@drawable/celda_cabecera" >
+
+					    <TextView
+					        android:text="@string/nombre"
+					        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+					        android:textColor="#FFFFFF"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:paddingLeft="4dp"
+					        android:gravity="left" />
+
+					    <TextView
+							android:text="@string/valorMedio100"
+					        android:textAppearance="?android:attr/textAppearanceMediumInverse"
+					        android:textColor="#FFFFFF"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"
+					        android:layout_weight="1"
+					        android:gravity="center" />
+					</LinearLayout>
+					
+		            <ScrollView 
+		                android:id="@+id/scrollNutrientes"
+		                android:layout_width="match_parent" 
+	       				android:layout_height="wrap_content" >
+	
+		                <TableLayout
+		                    android:id="@+id/tablaNutrientes"
+					        android:layout_width="match_parent"
+					        android:layout_height="wrap_content"					        
+					        android:stretchColumns="*"
+					        android:shrinkColumns="*" >
+	
+						</TableLayout>
+	
+		            </ScrollView>
+
+	            </LinearLayout>
+
+		        <!-- Pestaña ADITIVOS -->
+	            <ListView
+		            android:id="@+id/tabAditivos"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="16dp"
+		            android:layout_marginRight="1dp" >
+ 
+        		</ListView>
+        		
+         	</FrameLayout>
+
+    	</LinearLayout>
+
+	</TabHost>
+
+</LinearLayout>

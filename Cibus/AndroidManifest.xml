@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sovarb.cibus"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name="com.sovarb.cibus.ActivityMain"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+           	android:name=".ActivityConsultaAditivos"
+        	android:label="Consulta Aditivos">
+        </activity>
+        
+        <activity 
+           	android:name=".ActivityConsultaAlimentos"
+        	android:label="Consulta Alimentos">
+        </activity>
+
+        <activity 
+           	android:name=".ActivityConsultaFiltros"
+        	android:label="Consulta Filtros">
+        </activity>        
+        
+        <activity 
+           	android:name=".ActivityListaAditivos"
+        	android:label="Lista Aditivos">
+        </activity>
+        
+        <activity 
+           	android:name=".ActivityListaAlimentos"
+        	android:label="Lista Alimentos">
+        </activity>        
+        
+        <activity 
+           	android:name=".ActivityDetalleAditivos"
+        	android:label="Detalle Aditivos">
+        </activity>
+        
+        <activity 
+           	android:name=".ActivityDetalleAlimentos"
+        	android:label="Detalle Alimentos">
+        </activity>
+        
+        <activity 
+           	android:name=".ActivityDetalleFiltros"
+        	android:label="Detalle Filtros">
+        </activity>
+        
+        <activity 
+           	android:name=".ActivityDetalleFiltrosDefault"
+        	android:label="Detalle Filtros Default">
+        </activity>
+        
+		<activity 
+           	android:name=".ActivityEditarAditivos"
+        	android:label="Editar Aditivos"
+        	android:windowSoftInputMode="stateUnchanged">>
+        </activity>
+        
+        <activity 
+           	android:name=".ActivityEditarFiltros"
+        	android:label="Editar Filtros"
+        	android:windowSoftInputMode="stateUnchanged">>
+        </activity>
+        
+		<activity 
+           	android:name=".ActivityAddFiltros"
+        	android:label="Nuevo Filtros"
+        	android:windowSoftInputMode="stateUnchanged">
+        </activity>
+
+		<activity 
+           	android:name=".ActivitySemaforo"
+        	android:label="Semaforo">
+        </activity>		
+		
+		<activity 
+           	android:name=".ActivityAddRegla"
+        	android:label="Add Regla"
+        	android:windowSoftInputMode="stateUnchanged">
+        </activity>
+        
+        <activity 
+            android:name=".ActivityAddAlimento"
+            android:label="Add Alimento"
+            android:windowSoftInputMode="stateUnchanged">
+        </activity>
+        
+        <activity 
+            android:name=".ActivityNotFoundAlimento"
+            android:label="Aditivo Not Found Alimento">
+        </activity>
+        
+		<activity 
+           	android:name=".ActivityNotFound"
+        	android:label="Aditivo Not Found">
+        </activity>
+		
+    </application>
+
+</manifest>

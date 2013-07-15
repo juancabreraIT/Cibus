@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD" >
+
+    <RelativeLayout
+        android:id="@+id/barraSup2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="5dp"
+        android:background="#FFFF8000"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/botonBack"
+            android:gravity="center|left"
+            android:text="@string/newFiltro"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFFFF" />
+
+        <Button
+            android:id="@+id/botonEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/boton_save_style"
+            android:onClick="pulsaGuardarFiltro" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/barraSup2"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/nombre_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/nombreFiltro"
+            android:layout_marginLeft="6dp"
+            android:text="@string/nombre_"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/nombreFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/descripcionFiltro"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="3dp"
+            android:hint="@string/nombre"
+            android:maxLength="40"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666666" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/nombreFiltro"
+            android:layout_marginBottom="5dp"
+            android:background="#AAAAAAAA" />
+
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/descripcionFiltro"
+            android:layout_below="@id/line1"
+            android:layout_marginLeft="6dp"
+            android:text="@string/descripcion_"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/descripcionFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/descripcion"
+            android:hint="@string/descripcion"
+            android:maxLength="120"
+            android:maxLines="4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#666666" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/descripcionFiltro"
+            android:layout_marginBottom="5dp"
+            android:background="#AAAAAAAA" />
+        
+		<TextView
+		    android:id="@+id/textoReglas"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@id/line2"
+		    android:layout_marginBottom="5dp"
+		    android:layout_marginLeft="6dp"
+		    android:text="@string/reglas"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:textStyle="bold"
+		    android:typeface="serif" />
+		
+		<Button
+		    android:id="@+id/botonAddRegla"
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="wrap_content"
+		    android:layout_height="40dp"
+		    android:layout_below="@+id/line2"
+		    android:layout_centerHorizontal="true"
+		    android:text="@string/textoBotonAdd"
+		    android:onClick="pulsaAddRegla" />
+
+		<TextView
+		    android:id="@+id/textoIlustra"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@id/botonAddRegla"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginLeft="6dp"
+		    android:text="@string/textoIlustra"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:typeface="serif" />
+		
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listaFiltros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="3dp"
+        android:layout_below="@+id/relativeLayout1" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD" >
+
+    <RelativeLayout
+        android:id="@+id/barraSup2"
+       	android:layout_width="match_parent"
+       	android:layout_height="48dp"
+       	android:background="#FFFF8000"
+       	android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+	    <TextView
+	        android:id="@+id/numeroAditivo"
+	        android:hint="@string/exampleAditivo"
+	        android:text=""
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_toRightOf="@id/botonBack"
+		    android:gravity="center|left"
+	        android:textAppearance="?android:attr/textAppearanceLarge"	        
+	        android:textColor="#FFFFFFFF" />
+	    
+	    <Button
+            android:id="@+id/botonEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"            
+            android:background="@drawable/boton_save_style"
+            android:onClick="pulsaGuardar" />
+	    
+    </RelativeLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/barraSup2"
+        android:layout_marginLeft="16dp" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nombre_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/nombre"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FF4000" />
+
+            <EditText
+                android:id="@+id/editNombreAditivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:inputType="textPersonName"
+                android:textAppearance="?android:attr/textAppearanceLargeInverse" />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#AAAAAAAA" />
+
+            <TextView
+                android:id="@+id/tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/tipo"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="#FF4000" />
+
+			<Spinner
+			    android:id="@+id/spinnerTipos"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:background="@android:drawable/btn_default_small" />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#AAAAAAAA" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/descripcion_"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="#FF4000" />
+
+            <EditText
+                android:id="@+id/editDescripcionAditivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine" >
+
+                <requestFocus />
+            </EditText>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#AAAAAAAA" />
+
+            <TextView
+                android:id="@+id/caracter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/caracter"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="#FF4000" />
+
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                
+				<Button
+	                android:id="@+id/botonInofensivo"
+	                style="?android:attr/buttonStyleSmall"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="1dp"
+	                android:layout_marginRight="1dp"
+	                android:layout_weight="1"
+	                android:background="@drawable/boton_background_green"
+	                android:text="@string/inofensivo"/>
+	
+				<Button
+	                android:id="@+id/botonSospechoso"
+	                style="?android:attr/buttonStyleSmall"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="1dp"
+	                android:layout_marginRight="1dp"
+	                android:layout_weight="1"
+	                android:background="@drawable/boton_background_yellow"
+	                android:text="@string/sospechoso" />
+				
+				<Button
+	                android:id="@+id/botonPeligroso"
+	                style="?android:attr/buttonStyleSmall"
+	                android:layout_width="0dp"
+	                android:layout_height="match_parent"
+	                android:layout_marginLeft="1dp"
+	                android:layout_marginRight="1dp"
+	                android:layout_weight="1"
+	                android:background="@drawable/boton_background_red"
+	                android:text="@string/peligroso" />
+                
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#AAAAAAAA" />
+        </LinearLayout>
+
+	</ScrollView>
+</RelativeLayout>

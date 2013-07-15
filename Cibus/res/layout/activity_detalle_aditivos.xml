@@ -1,0 +1,172 @@
+<RelativeLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD">
+
+    <RelativeLayout
+        android:id="@+id/barraSup2"
+       	android:layout_width="match_parent"
+       	android:layout_height="48dp"
+       	android:background="#FFFF8000"
+       	android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/botonBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/boton_atras_style"
+            android:onClick="pulsaAtras" />
+
+	    <TextView
+	        android:id="@+id/numeroAditivo"
+	        android:hint="@string/exampleAditivo"
+	        android:text=""
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_toRightOf="@id/botonBack"
+		    android:gravity="center|left"
+	        android:textAppearance="?android:attr/textAppearanceLarge"	        
+	        android:textColor="#FFFFFFFF" />
+
+	    <Button
+            android:id="@+id/botonEditar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"            
+            android:background="@drawable/boton_edit_style"
+            android:onClick="pulsaEditar" />
+	    
+    </RelativeLayout>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/barraSup2"
+        android:layout_marginLeft="16dp" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nombre_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/nombre"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#FF4000" />
+
+            <TextView
+                android:id="@+id/nombreAditivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                android:textColor="#666666"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#AAAAAAAA" />
+
+            <TextView
+                android:id="@+id/tipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/tipo"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="#FF4000" />
+
+            <TextView
+                android:id="@+id/tipoAditivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#666666" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#AAAAAAAA" />
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/descripcion_"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="#FF4000" />
+
+            <TextView
+                android:id="@+id/descripcionAditivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:maxLines="4"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#666666" />
+
+            <ImageView
+                android:id="@+id/flecha"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+				android:layout_marginBottom="5dp"
+                android:layout_gravity="right"
+                android:contentDescription="@string/contentFlechita"
+                android:src="@drawable/navigation_expand" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#AAAAAAAA" />
+
+            <TextView
+                android:id="@+id/caracter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:text="@string/caracter"
+                android:textAppearance="?android:attr/textAppearanceMediumInverse"
+                android:textColor="#FF4000" />
+
+            <TextView
+                android:id="@+id/caracterAditivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:hint="@string/undefined"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#666666" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#AAAAAAAA" />
+        </LinearLayout>
+
+	</ScrollView>
+</RelativeLayout>
